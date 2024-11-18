@@ -1,0 +1,31 @@
+{
+  "extends": "./base.json",
+
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+    "allowJs": true,
+    "typeRoots": ["types/**/*"],
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@solyarisoftware/voskjs": ["solyarisoftware/voskjs"],
+      "@/src/*": ["./src/*"],
+      "@/types/*": ["./types/*"]
+    }
+  },
+
+  "include": [
+    "src/**/*.{js,ts}",
+    "solyarisoftware/**/*.{js,ts}",
+    "**/*.ts",
+    "**/*.tsx",
+    "public"
+  ],
+  "ts-node": {
+    "transpileOnly": true
+  }
+}
